@@ -1,0 +1,19 @@
+extends layout.pug
+
+block content
+
+  article.portfolio-intro
+
+    h1 Ratoobi&apos;s Portfolio
+
+    p I handpicked a few projects to showcase my newfound skills
+
+
+  article.portfolio-project-thumbs
+    .projects-box.box.grid
+
+      each project in projects
+        .cell
+          a(href=`/project/${project.id}` target="_blank")
+            img.thumbnail(src=`${projects[project.id].image_urls[0]}`, alt='')
+            h5=`${projects[project.id].project_name}`
