@@ -1,9 +1,8 @@
 {
   "name": "node-static-site-with-express",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
-  "scripts": { 
+  "scripts": {
     "start": "npm init -y && npm install && nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +14,14 @@
     "node": "^17.1.0",
     "nodemon": "^2.0.15",
     "pug": "^3.0.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ELLDev/node-static-site-with-express.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ELLDev/node-static-site-with-express/issues"
+  },
+  "homepage": "https://github.com/ELLDev/node-static-site-with-express#readme",
+  "description": ""
 }

@@ -41,6 +41,19 @@
     },
     {
       "id": 3,
+      "project_name": "data-pagination-and-filtering",
+      "description": "Simple cheese website with a search bar",
+      "technologies": ["HTML", "CSS", "JS"],
+      "live_link": "https://chiss-website.vercel.app/",
+      "github_link": "https://github.com/ELLDev/data-pagination-and-filtering",
+      "image_urls": [
+        "/static/images/main/project_3_mainshot.png",
+        "/static/images/additional/project_3_image_0.png",
+        "/static/images/additional/project_3_image_1.png"
+      ]
+    },
+    {
+      "id": 4,
       "project_name": "interactive-form",
       "description": "Interactive registration form",
       "technologies": ["HTML", "CSS", "JS"],
