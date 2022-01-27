@@ -25,7 +25,7 @@ body {
   background: #fefefe;
   background: #000;
   transform: translateX(0px);
-  transition: all 0.4s ease-out;
+  transition: all 400ms ease-out;
 }
 
 article {
@@ -43,9 +43,7 @@ p {
 
 h5 {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  letter-spacing: 2.5px;
-  -webkit-text-transform: uppercase;
-  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 h6 {
@@ -98,13 +96,31 @@ a {
 }
 
 .box h6 {
-  font-size: 1rem;
+  font-size: 108%;
   font-weight: bolder;
   letter-spacing: 2px;
 }
 
+.cell ul {
+  color: white;
+  list-style: none;
+  font-size: 200%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 0;
+  flex-direction: row;
+  margin: 0;
+  margin-top: 25%;
+}
+
 .box li {
-  font-size: 13px;
+  font-size: 100%;
+  /* margin: 0.75rem;
+  background: #80808087;
+  display: block;
+  border-radius: 25px;
+  padding: 0.25rem 1rem; */
 }
 
 /*
@@ -142,7 +158,7 @@ nav a span {
   height: 100%;
   min-height: 100%;
   padding: 20px;
-  background: #251000;
+  background: linear-gradient(0deg, rgb(122, 39, 230) 0%, rgb(81 201 218) 100%);
 }
 
 .sidebar-info-box {
@@ -163,25 +179,106 @@ nav a span {
   padding: 10px;
 }
 
+span.github:hover {
+  cursor: pointer;
+}
+
+.sidebar h5:after {
+  display: block;
+  content: "";
+  border-bottom: solid 2px #fff;
+  transform: scaleX(0);
+  transition: transform 300ms ease-in-out;
+}
+
+.sidebar h5:hover:after {
+  transform: scaleX(1);
+}
+
 .sidebar h5 {
+  display: inline-block;
   color: #fefefe;
   margin: 0 auto 0.5rem;
 }
 
+svg {
+  display: inline-block;
+  position: relative;
+  top: 5px;
+}
+
+.rotate-svg {
+  -webkit-animation-name: spin;
+  -webkit-animation-duration: 500ms;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-name: spin;
+  -moz-animation-duration: 500ms;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: ease-in-out;
+  -ms-animation-name: spin;
+  -ms-animation-duration: 500ms;
+  -ms-animation-iteration-count: infinite;
+  -ms-animation-timing-function: ease-in-out;
+
+  animation-name: spin;
+  animation-duration: 500ms;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+}
+@-ms-keyframes spin {
+  from {
+    -ms-transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(-360deg);
+  }
+}
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(-360deg);
+  }
+}
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(-360deg);
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
 .sidebar p {
+  font-family: Verdana, sans-serif;
   text-rendering: optimizeLegibility;
   line-height: 1.6;
-  font-size: 14px;
-  color: #999;
+  font-size: 100%;
+  color: white;
 }
 
 .sidebar a {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 600;
-  font-size: 13px;
+  font-size: 90%;
   letter-spacing: 2.5px;
   text-transform: uppercase;
-  color: #555;
+  color: white;
+  transition: text-shadow 300ms ease-in-out;
+}
+
+.sidebar a:hover {
+  text-shadow: 1px 1px 0 rgb(85, 27, 161);
 }
 
 .header {
@@ -189,7 +286,11 @@ nav a span {
   color: #fefefe;
   height: 40px;
   padding: 0.5rem;
-  background: #251000;
+  background: linear-gradient(
+    90deg,
+    rgb(122, 39, 230) 0%,
+    rgb(81 201 218) 100%
+  );
   border-left: 1px solid #251000;
 }
 
@@ -206,7 +307,7 @@ nav a span {
   width: 20px;
   height: 16px;
   border: none;
-  background: #0a0a0a;
+  background: transparent;
   margin-top: 3px;
   margin-right: 10px;
   border-top: 2px solid #fefefe;
@@ -259,16 +360,46 @@ nav a span {
   width: 100%;
 }
 
+/* <a href="/project/2" target="_blank">
+  <div class="image-box">
+    <ul>
+      <li>Javascript</li>
+      <li>HTML5</li>
+      <li >CSS3</li>
+    </ul>
+  </div>
+</a> */
+
+/* div.img-box {
+  background-image: url(/static/images/main/project_2_mainshot.png);
+  background-size: cover;
+  height: 80%;
+  width: 100%;
+  border: 4px solid #fff;
+  box-shadow: 0 0 0 1px rgb(10 10 10 / 20%);
+} */
+
 .cell img {
   width: 100%;
   min-width: 100px;
   border: 4px solid #fff;
   box-shadow: 0 0 0 1px rgba(10, 10, 10, 0.2);
+  filter: none;
+  transition: filter 300ms ease-in-out;
 }
 
+.cell img:hover {
+  filter: blur(1px) brightness(0.6);
+}
 /* 
   About and project pages styles 
 */
+.about-intro-box p,
+.about-intro-box h1,
+.about-intro-box div {
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 .about-intro-box p,
 .project-info-box p {
   font-size: 125%;
@@ -301,6 +432,7 @@ nav a span {
   padding: 0.85em 1em;
   background-color: #333;
   border: 1px solid transparent;
+  font-size: 105%;
 }
 
 .error-status {
@@ -319,32 +451,29 @@ nav a span {
   padding: 0;
   text-align: center;
   font-family: "Righteous";
-  /* font-size: 5rem; */
-  font-size: 3rem;
+  font-size: 250%;
   color: black;
 }
 
 .error-img {
-  margin: 3rem 3rem 0 3rem;
+  display: block;
+  margin: 0.5rem auto 0;
   padding: 0;
-  width: 70%;
+  width: auto;
   height: auto;
-  max-width: 500px;
+  max-width: 30vh;
 }
 
 .page-title {
   font-family: "Righteous";
 }
 
-.title-description {
-  font-family: Verdana, sans-serif;
-}
 /* 
   Tablet layout styles 
 */
 @media screen and (min-width: 768px) {
   .sidebar h5 {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
 
   .portfolio-intro h1 {
@@ -378,14 +507,14 @@ nav a span {
   }
 
   .error-img {
-    margin: 3rem calc(50% - 300px);
-    margin-bottom: 0;
+    margin-top: 3rem;
+    max-width: 40vh;
   }
   .error-status {
     font-size: 7rem;
   }
   .error-message {
-    font-size: 4rem;
+    font-size: 300%;
   }
 }
 
@@ -413,6 +542,6 @@ nav a span {
     font-size: 10rem;
   }
   .error-message {
-    font-size: 5rem;
+    font-size: 400%;
   }
 }
