@@ -31,7 +31,6 @@ app.use((req, res) => {
   const err = new Error();
   err.status = 404;
   err.message = "Page not found";
-  console.error("The requested route was not found.");
   res.render("page-not-found");
 });
 

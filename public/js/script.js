@@ -7,6 +7,9 @@
 const body = document.querySelector('body');
 const githubSVG = document.querySelector('svg');
 const githubSpan = document.querySelector('span.github');
+const grid = document.querySelectorAll('div.cell');
+const technologiesListItems = document.querySelectorAll('.technologies li');
+const nonBreakingSpace = '&nbsp;';
 let headerBtnClicked = false;
 
 document.querySelector('#menu-icon').addEventListener('click', e => {
@@ -17,16 +20,22 @@ document.querySelector('#menu-icon').addEventListener('click', e => {
 /**
  * Rotate github SVG on hover
  */
-githubSVG.addEventListener('mouseover', (e) => {
-  console.log("naides");
-});
-
-
 githubSpan.onmouseover = ()=> {
   githubSVG.classList.add('rotate-svg')
-  console.log("naides");
 };
 githubSpan.onmouseout = ()=> {
   githubSVG.classList.remove('rotate-svg')
-  console.log("chiss");
 };
+
+grid.forEach(cell => {
+  cell.onmouseover = ()=> {
+    cell.firstChild.firstChild.firstChild.style.opacity = "1";
+  }
+  cell.onmouseout = ()=> {
+    cell.firstChild.firstChild.firstChild.style.opacity = "0";
+  }
+});
+
+technologiesListItems.forEach(item => {
+  item.innerHTML = nonBreakingSpace + item.innerHTML + nonBreakingSpace;
+});

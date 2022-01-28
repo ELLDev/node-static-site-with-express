@@ -11,6 +11,9 @@ block content
 
       each project in projects
         .cell
-          a(href=`/project/${project.id}` target="_blank")
-            img.thumbnail(src=`${projects[project.id].image_urls[0]}`, alt='')
+          a(href=`/project/${project.id}`)
+            .img-box(style=`background-image: url(${projects[project.id].image_urls[0]})`)
+              ul.technologies
+                each tech in projects[project.id].technologies
+                  li=tech
             h5=`${projects[project.id].project_name}`
