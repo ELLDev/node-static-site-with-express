@@ -2,8 +2,33 @@
   "projects": [
     {
       "id": 0,
+      "project_name": "react-with-rest-api",
+      "description": "App que simula um sistema de gerenciamento de cursos",
+      "technologies": ["HTML5", "CSS3", "React", "Node", "SQLite"],
+      "github_link": "https://github.com/ELLDev/react-with-rest-api",
+      "image_urls": [
+        "/static/images/main/project_0_mainshot.png",
+        "/static/images/additional/project_0_image_0.png",
+        "/static/images/additional/project_0_image_1.png"
+      ]
+    },
+    {
+      "id": 1,
+      "project_name": "react-photo-gallery-app",
+      "description": "Galeria de fotos que faz uso da API flickr",
+      "technologies": ["HTML5", "CSS3", "React"],
+      "live_link": "https://react-photo-gallery-app.vercel.app/",
+      "github_link": "https://github.com/ELLDev/react-photo-gallery-app",
+      "image_urls": [
+        "/static/images/main/project_1_mainshot.png",
+        "/static/images/additional/project_1_image_0.png",
+        "/static/images/additional/project_1_image_1.png"
+      ]
+    },
+    {
+      "id": 2,
       "project_name": "interactive-form",
-      "description": "Interactive registration form",
+      "description": "Formulário de registro interativo",
       "technologies": ["HTML5", "CSS3", "JavaScript"],
       "live_link": "https://interactive-form-pi.vercel.app/",
       "github_link": "https://github.com/ELLDev/interactive-form",
@@ -14,9 +39,9 @@
       ]
     },
     {
-      "id": 1,
+      "id": 3,
       "project_name": "onassis-quote-generator",
-      "description": "Random quote generator",
+      "description": "Exibe frases marcantes do magnata Aristotle Onassis",
       "technologies": ["HTML5", "CSS3", "JavaScript"],
       "live_link": "https://onassis-quote-generator.vercel.app/",
       "github_link": "https://github.com/ELLDev/onassis-quote-generator",
@@ -27,7 +52,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": 4,
       "project_name": "data-pagination-and-filtering",
       "description": "Simple cheese website with a search bar",
       "technologies": ["HTML5", "CSS3", "JavaScript"],
@@ -37,32 +62,6 @@
         "/static/images/main/project_3_mainshot.png",
         "/static/images/additional/project_3_image_0.png",
         "/static/images/additional/project_3_image_1.png"
-      ]
-    },
-    {
-      "id": 3,
-      "project_name": "responsive-layout-rat-site",
-      "description": "Mock profile page showcasing porfolio and services of a hacker rat",
-      "technologies": ["HTML5", "CSS3"],
-      "live_link": "https://responsive-layout-rat-site.vercel.app/",
-      "github_link": "https://github.com/ELLDev/responsive-layout-rat-site",
-      "image_urls": [
-        "/static/images/main/project_0_mainshot.png",
-        "/static/images/additional/project_0_image_0.png",
-        "/static/images/additional/project_0_image_1.png"
-      ]
-    },
-    {
-      "id": 4,
-      "project_name": "responsive-registration-form",
-      "description": "Fictitional magazine newsletter form",
-      "technologies": ["HTML5", "CSS3"],
-      "live_link": "https://responsive-registration-form.vercel.app/",
-      "github_link": "https://github.com/ELLDev/responsive-registration-form",
-      "image_urls": [
-        "/static/images/main/project_1_mainshot.png",
-        "/static/images/additional/project_1_image_0.png",
-        "/static/images/additional/project_1_image_1.png"
       ]
     }
   ]

@@ -14,17 +14,20 @@ block content
         p=`${project.description}`
 
       .project-tech-links-box.box
-        h6 Technologies
+        h6 Tecnologias
         ul
           each tech in project.technologies
             li=`${tech}`
 
-        a.btn-link(href=`${project.live_link}` target='_blank') Live Demo
+        if project.live_link
+          a.btn-link(href=`${project.live_link}` target='_blank') Live Demo
         a.btn-link(href=`${project.github_link}` target='_blank') GitHub Repo
 
     .project-img-box.box
-      img.project-img(src=`${project.image_urls[1]}`, alt='project screenshot 1')
-      img.project-img(src=`${project.image_urls[2]}`, alt='project screenshot 2')
+      .img-one-container
+        img.project-img.project-img-one(src=`${project.image_urls[1]}`, alt='project screenshot 1')
+      .img-two-container
+        img.project-img.project-img-two(src=`${project.image_urls[2]}`, alt='project screenshot 2')
 
     nav.nav
       a(href='/')
