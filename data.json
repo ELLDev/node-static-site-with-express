@@ -5,6 +5,7 @@
       "project_name": "react-with-rest-api",
       "description": "App que simula um sistema de gerenciamento de cursos",
       "technologies": ["HTML5", "CSS3", "React", "Node", "SQLite"],
+      "live_link": "https://react-with-rest-api.herokuapp.com/",
       "github_link": "https://github.com/ELLDev/react-with-rest-api",
       "image_urls": [
         "/static/images/main/project_0_mainshot.png",
