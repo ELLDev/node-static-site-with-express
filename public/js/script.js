@@ -7,7 +7,7 @@
 const body = document.querySelector('body');
 const githubSVG = document.querySelector('svg');
 const githubSpan = document.querySelector('span.github');
-const grid = document.querySelectorAll('div.cell');
+const grid = document.querySelectorAll('a.cell');
 const technologiesListItems = document.querySelectorAll('.technologies li');
 const nonBreakingSpace = '&nbsp;';
 let headerBtnClicked = false;
@@ -29,10 +29,10 @@ githubSpan.onmouseout = ()=> {
 
 grid.forEach(cell => {
   cell.onmouseover = ()=> {
-    cell.firstChild.firstChild.firstChild.style.opacity = "1";
+    cell.children[1].style.opacity = "1";
   }
   cell.onmouseout = ()=> {
-    cell.firstChild.firstChild.firstChild.style.opacity = "0";
+    cell.children[1].style.opacity = "0";
   }
 });
 
