@@ -540,8 +540,8 @@ img {
   }
 
   .project-img-box {
-    display: flex;
     flex-wrap: nowrap;
+    justify-content: flex-start;
   }
 
   .img-one-container {
@@ -626,6 +626,11 @@ img {
 }
 
 @media screen and (min-width: 1600px) {
+  .img-one-container,
+  .img-two-container {
+    width: auto;
+  }
+
   .portfolio-intro {
     text-align: center;
     margin: 0 auto;
@@ -651,7 +656,7 @@ img {
     left: 0;
   }
 
-  .box {
+  .projects-box {
     width: 85%;
     margin: auto;
     padding: 0;
